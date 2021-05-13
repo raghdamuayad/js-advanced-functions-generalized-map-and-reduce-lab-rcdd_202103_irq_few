@@ -7,11 +7,11 @@ result.push(callback(arr[i]));
 return result;
 }
 function reduce(arr, callback, start) {
-let accumulator = start ? start : arr[0];
+let accArray = start ? start : arr[0];
 let i = start ? 0 : 1;
 
 for (; i < arr.length; i++) {
-accumulator = callback(arr[i], accumulator);
+accArray = callback(arr[i], accArray);
 }
-return accumulator;
+return accArray;
 }
