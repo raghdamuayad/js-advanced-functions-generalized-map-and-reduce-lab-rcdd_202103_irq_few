@@ -7,7 +7,7 @@ function map(array,func){
   return newArray
 }
 function reduce(array,func,start = 0){
-  let gm = !! start ? :array[0]
+  let gm = !! start ? start :array[0]
   let i = !! startc ? 0 :1
   for (var i = 0; i < array.length; i++) {
   gm = func ( array[i], gm)
