@@ -1,16 +1,19 @@
 // Add your functions here
-function map(array,func){
-  const newArray = []
+function map(arr, callback) {
+  let result = [];
   for (let i = 0; i < arr.length; i++) {
-    newArray.Push(func(array[i]))
+    result.push(callback(arr[i]));
   }
-  return newArray
+  return result;
 }
-function reduce(array,func,start = 0){
-  let gm = !! start ? start :array[0]
-  let i = !! startc ? 0 :1
-  for ( ; i < array.length; i++) {
-  gm = func ( array[i], gm)
+
+function reduce(arr, callback, start) {
+  let accumulator = start ? start : arr[0];
+  let i = start ? 0 : 1;
+
+  for (; i < arr.length; i++) {
+    accumulator = callback(arr[i], accumulator);
   }
-  return gm
+
+  return accumulator;
 }
